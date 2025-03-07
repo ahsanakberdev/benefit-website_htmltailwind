@@ -1,0 +1,228 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* STYLES */
+
+html,body{
+    @apply !overflow-x-hidden;
+}
+ 
+.container{
+    max-width: 1200px !important;
+}
+ 
+.sticky{
+    z-index: 9999 !important;
+}
+
+.mobile-navigation.active{
+    opacity: 1;
+    visibility: visible;
+    left: 0;
+    z-index: 99;
+}
+
+.top-area span{
+    @apply relative flex text-xs font-semibold after:block after:mx-2 after:bg-white after:h-4 after:w-px;
+}
+
+.navigations-items li a{
+    @apply text-dark-100 text-sm font-semibold lg:mb-0 mb-3 xl:pr-4 lg:pr-1 pr-0 inline-block hover:text-secondary-100 transition-all ease-linear duration-300;
+}
+
+.btn{
+    @apply py-2 px-4 rounded text-white text-sm font-semibold transition-all ease-linear duration-300 hover:bg-secondary-100 hover:border hover:border-secondary-100;
+}
+
+.product-box .btn{
+    @apply border border-secondary-100 hover:!bg-transparent hover:!text-secondary-100;
+}
+
+.product-box .btn:hover.arrow-btn,
+.sec:hover.arrow-btn{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17.122' height='10.274' viewBox='0 0 17.122 10.274'%3E%3Cpath id='arrow-right' d='M108.1,170.137a.435.435,0,0,1,0-.6l3.553-3.981H96.428a.428.428,0,1,1,0-.856h15.228l-3.548-3.981a.428.428,0,1,1,.6-.6s4.238,4.655,4.281,4.709a.464.464,0,0,1,.128.3.439.439,0,0,1-.128.3c-.043.043-4.281,4.709-4.281,4.709a.433.433,0,0,1-.3.123A.443.443,0,0,1,108.1,170.137Z' transform='translate(-96 -159.986)' fill='%237ABA05'/%3E%3C/svg%3E%0A");
+}
+
+.dark:hover.arrow-btn{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17.122' height='10.274' viewBox='0 0 17.122 10.274'%3E%3Cpath id='arrow-right' d='M108.1,170.137a.435.435,0,0,1,0-.6l3.553-3.981H96.428a.428.428,0,1,1,0-.856h15.228l-3.548-3.981a.428.428,0,1,1,.6-.6s4.238,4.655,4.281,4.709a.464.464,0,0,1,.128.3.439.439,0,0,1-.128.3c-.043.043-4.281,4.709-4.281,4.709a.433.433,0,0,1-.3.123A.443.443,0,0,1,108.1,170.137Z' transform='translate(-96 -159.986)' fill='%231F1E1E'/%3E%3C/svg%3E%0A");
+}
+
+.banner .swiper-slide .slide{
+    @apply lg:pt-[473px] bg-cover bg-center md:pt-96 pt-72 pb-16 bg-no-repeat flex justify-between items-end;
+}
+
+.banner .swiper-slide .slide-1{
+    @apply bg-banner;
+}
+
+.banner .swiper-slide .slide-2{
+    @apply bg-banner;
+}
+
+.banner .swiper-slide-active .slide-2::after{
+    @apply hidden;
+}
+
+.banner h1,
+.banner p,
+.banner a{
+    @apply z-20 relative;
+}
+
+/* .banner .slide-2::after{
+    content: "";
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    clip-path: polygon(30% 0, 100% 0%, 100% 100%, 15% 100%);
+    background-color: #7ABA05;
+    opacity: 0.5;
+    z-index: 9;
+} */
+
+.banner h1{
+    @apply xl:text-XlargeFont lg:text-4xl text-3xl font-bold text-white;
+}
+
+.banner p{
+    @apply lg:text-2xl md:text-xl text-lg font-light text-white lg:pt-4 pt-3 lg:pb-5 pb-3;
+}
+
+.swiper-pagination-bullet{
+    @apply !h-1.5 !w-6 !bg-white !rounded !opacity-100;
+}
+
+.swiper-container .swiper-pagination-bullet{
+    @apply !bg-[#E3E3E3];
+}
+
+.swiper-pagination-bullet-active,
+.swiper-container .swiper-pagination-bullet-active{
+    @apply !bg-secondary-100;
+}
+
+.swiper-container3 {
+    overflow: hidden !important;
+    width: 100vw !important;
+}
+
+.swiper-container3 .swiper-slide{
+    @apply bg-white;
+}
+
+.arrow-btn{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17.122' height='10.274' viewBox='0 0 17.122 10.274'%3E%3Cpath id='arrow-right' d='M108.1,170.137a.435.435,0,0,1,0-.6l3.553-3.981H96.428a.428.428,0,1,1,0-.856h15.228l-3.548-3.981a.428.428,0,1,1,.6-.6s4.238,4.655,4.281,4.709a.464.464,0,0,1,.128.3.439.439,0,0,1-.128.3c-.043.043-4.281,4.709-4.281,4.709a.433.433,0,0,1-.3.123A.443.443,0,0,1,108.1,170.137Z' transform='translate(-96 -159.986)' fill='%23fff'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: 93% 50%;
+}
+
+.slider{
+    @apply relative cursor-pointer after:transition-all after:rounded-2xl after:duration-300 after:ease-in hover:after:opacity-60 hover:after:visible transition-all duration-300 ease-in after:content-[''] after:absolute after:right-0 after:top-0 after:left-0 after:bottom-0 after:bg-secondary-100 after:opacity-0 after:invisible;
+}
+
+.slider:hover .info{
+    @apply opacity-100 visible transition-all duration-300 ease-in;
+}
+
+.slider .info{
+    @apply absolute bottom-5 left-5 opacity-0 invisible;
+}
+
+.slider h4{
+    @apply text-white lg:text-2xl text-xl font-semibold relative z-20;
+}
+
+.slider img{
+    @apply w-full;
+}
+
+.swiper-slide{
+    @apply !h-auto;
+}
+
+.swiper-wrapper .swiper-slide .product-box{
+    @apply !h-full;
+}
+
+.product-box .picture{
+    @apply !h-full flex justify-center items-center;
+}
+
+.product-box .picture img{
+    @apply sm:w-auto w-28;
+}
+
+.product-box{
+    @apply bg-white border border-light-200 rounded-2xl lg:pt-7 pt-5 pb-4 lg:px-5 px-4 flex flex-col justify-between;
+}
+
+.product-box .heart{
+    @apply lg:h-10 lg:w-10 h-8 w-8 bg-dark-200 rounded-full flex justify-center items-center absolute top-2.5 right-2.5;
+}
+
+.product-box h4{
+    @apply lg:pl-2 pl-1.5 text-sm font-semibold text-secondary-100;
+}
+
+.product-box .rate,
+.product-box .disc{
+    @apply text-base text-dark-100 font-bold;
+}
+
+.product-box .disc{
+    @apply text-[#AFAFAF] md:pr-3 pr-1 line-through;
+}
+
+.product-box .desc{
+    @apply text-sm text-dark-100 inline-block lg:py-2 py-1.5;
+}
+
+.product-box .variant{
+    @apply text-xs text-[#555555];
+}
+
+.section-heading{
+    @apply lg:text-3xl md:text-2xl text-xl font-bold text-dark-100;
+}
+
+.section-paragraph{
+    @apply md:text-sm text-xs font-normal text-grey-100;
+}
+
+.review-box{
+    @apply lg:p-6 p-4 bg-white rounded-2xl;
+}
+
+.swiper-container3 .swiper-slide{
+    @apply rounded-2xl shadow-sm mr-4;
+}
+
+.swiper-container3,
+.swiper-container3 .swiper-wrapper{
+    @apply !static;
+}
+
+.dot{
+    @apply after:content-[''] after:lg:mx-4 after:mx-3 after:block after:h-2 after:w-2 after:bg-secondary-100 after:rounded-full;
+}
+
+footer h4{
+    @apply text-sm font-bold text-white leading-7 pb-3;
+}
+
+footer li a{
+    @apply text-sm text-white underline flex items-center mb-1.5;
+}
+
+
+@media(max-width:576px){
+    .slide-2::after{
+        display: none;
+    }
+}
+
+
