@@ -41,7 +41,7 @@ module.exports = {
         }
       },
       backgroundImage: {
-        'banner': "url('../src/img/banner.jpg')",
+        'banner': "url('/Banner.jpg')",
         'offers': "url('../src/img/offers.jpg')",
         'clubs': "url('../src/img/clubs.jpg')",
         'offer-icon': "url('../src/img/offer-icon.svg')",
