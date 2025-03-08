@@ -1236,11 +1236,11 @@ html,body {
 }
 
 .banner .swiper-slide .slide-1 {
-  background-image: url('/Banner.jpg');
+  background-image: url('../Banner.jpg');
 }
 
 .banner .swiper-slide .slide-2 {
-  background-image: url('/Banner.jpg');
+  background-image: url('../Banner.jpg');
 }
 
 .banner .swiper-slide-active .slide-2::after {
